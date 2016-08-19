@@ -6,7 +6,7 @@
 <script>
     import Login from './components/login'
     import Main from './components/main'
-    import startBot from './startBot'
+    import startBot from './start-bot'
 
     const AppState = {
         Login: "Login",

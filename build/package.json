@@ -3,6 +3,17 @@
   "version": "1.0.0",
   "main": "electron.js",
   "description": "Your GoF Bot On Desktop",
+  "scripts": {
+    "build": "node tasks/release.js",
+    "build:clean": "cross-env PLATFORM_TARGET=clean node tasks/release.js",
+    "build:darwin": "cross-env PLATFORM_TARGET=darwin node tasks/release.js",
+    "build:linux": "cross-env PLATFORM_TARGET=linux node tasks/release.js",
+    "build:mas": "cross-env PLATFORM_TARGET=mas node tasks/release.js",
+    "build:win32": "cross-env PLATFORM_TARGET=win32 node tasks/release.js",
+    "dev": "node tasks/runner.js",
+    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter app",
+    "pack": "cross-env NODE_ENV=production webpack -p --progress --colors"
+  },
   "author": "PokemonGof-Desktop-Team",
   "license": "MIT",
   "dependencies": {

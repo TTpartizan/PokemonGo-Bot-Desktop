@@ -184,7 +184,7 @@
 
                             pokemons.push({
                                 Num:   current_pokemon_data.pokemon_id,
-                                Image: require('./Utils').pad_with_zeroes(current_pokemon_data.pokemon_id, 3),
+                                Image: require('./utils').pad_with_zeroes(current_pokemon_data.pokemon_id, 3),
                                 Name:  constants.pokemonArray[current_pokemon_data.pokemon_id - 1].Name,
                                 CP:    current_pokemon_data.cp,
                                 IVA:   IVA,
@@ -230,8 +230,8 @@
 
                     for (var i = 0; i < sortedPokedex.length; i++) {
                         pokedex.push({
-                            Num:   require('./Utils').pad_with_zeroes(sortedPokedex[i].id, 3),
-                            Image: require('./Utils').pad_with_zeroes(sortedPokedex[i].id, 3),
+                            Num:   require('./utils').pad_with_zeroes(sortedPokedex[i].id, 3),
+                            Image: require('./utils').pad_with_zeroes(sortedPokedex[i].id, 3),
                             Name:  constants.pokemonArray[sortedPokedex[i].id - 1].Name,
                             Enc:   sortedPokedex[i].enc,
                             Cap:   sortedPokedex[i].cap,

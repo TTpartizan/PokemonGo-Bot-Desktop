@@ -6,10 +6,11 @@ const electron      = require('electron'),
       BrowserWindow = electron.BrowserWindow;
 
 let mainWindow,
-    config = {};
+    config = {
+        port: 8080
+    };
 
 if (process.env.NODE_ENV === 'development') {
-    config     = require('../config');
     config.url = `http://localhost:${config.port}`;
 } else {
     config.devtron = false;
